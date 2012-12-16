@@ -2,6 +2,7 @@ Demo::Application.routes.draw do
   match '/home', :to => 'pages#home'
   match '/contact',   :to => 'pages#contact'
   match '/signup',  :to => 'users#signup'
+  match '/profile/:id',  :to => 'users#profile'
 
   resources :messages
 

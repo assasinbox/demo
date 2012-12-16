@@ -13,7 +13,7 @@
 <% @messages.each do |message| %>
   <tr>
     <td><%= message.content %></td>
-    <td><%= message.user_id %></td>
+    <td><%= message.user.name %></td>
     <td><%= message.destination_id %></td>
     <td><%= link_to 'Show', message, :class => 'btn btn-mini btn-info' %></td>
     <td><%= link_to 'Edit', edit_message_path(message), :class => 'btn btn-mini btn-warning' %></td>
