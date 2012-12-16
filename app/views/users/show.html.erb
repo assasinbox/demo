@@ -1,0 +1,17 @@
+<div class="alert alert-success">
+  <button type="button" class="close" data-dismiss="alert">×</button>
+  <p id="notice"><%= notice %></p>
+</div>
+
+<p>
+  <b>Name:</b>
+  <%= @user.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @user.email %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user), :class => 'btn btn-mini' %> |
+<%= link_to 'Back', users_path, :class => 'btn btn-mini' %>

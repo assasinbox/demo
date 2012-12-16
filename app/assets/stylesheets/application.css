@@ -1,13 +1,114 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_self
- *= require_tree .
-*/
+body {
+    -webkit-transform: translate3D(0, 0, 0);
+    font: 14px arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #eee;
+}
+.input {
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    font: 14px arial, sans-serif;
+    margin: 0;
+    padding: 5px 10px;
+    height: 22px;
+    vertical-align: middle;
+}
+.input:focus {
+    border-color: #36c;
+    outline: 0;
+}
+h3 {
+    line-height: 32px;
+}
+.tip {
+    color: #666;
+    font-size: 12px;
+    font-style: italic;
+}
+.cell {
+    float: left;
+    width: 50%;
+}
+.button {
+    -webkit-transition: max-width 0.3s linear, text-indent 0.3s linear, color 0.3s linear;
+    -moz-transition: max-width 0.3s linear, text-indent 0.3s linear, color 0.3s linear;
+    -o-transition: max-width 0.3s linear, text-indent 0.3s linear, color 0.3s linear;
+    transition: max-width 0.3s linear, text-indent 0.3s linear, color 0.3s linear;
+    background-color: #f00; /* background default state */
+    border-radius: 16px;
+    color: rgba(255,255,255,0.1);
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 32px;
+    overflow: hidden;
+    padding-right: 32px;
+    position: relative;
+    text-decoration: none;
+    text-indent: -20px;
+    max-width: 0;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: right;
+}
+.button_icon {
+    -webkit-transition: -webkit-transform 0.6s ease-out;
+    -moz-transition: transform 0.6s ease-out;
+    -o-transition: -o-transform 0.6s ease-out;
+    transition: transform 0.6s ease-out;
+    border-radius: 16px;
+    color: rgba(255,255,255, 1);
+    font-size: 1.3em;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-indent: 0;
+    top: 0;
+    width: 32px;
+}
+.button:hover {
+    -webkit-transition: max-width 0.3s linear 0.3s, text-indent 0.3s linear 0.3s, color 0.3s linear 0.3s;
+    -moz-transition: max-width 0.3s linear 0.3s, text-indent 0.3s linear 0.3s, color 0.3s linear 0.3s;
+    -o-transition: max-width 0.3s linear 0.3s, text-indent 0.3s linear 0.3s, color 0.3s linear 0.3s;
+    transition: max-width 0.3s linear 0.3s, text-indent 0.3s linear 0.3s, color 0.3s linear 0.3s;
+    color: rgba(255,255,255,1);
+    max-width: 150px;
+    text-indent: 20px;
+}
+.button:hover .button_icon {
+    -webkit-transition: -webkit-transform 0.6s ease-out;
+    -moz-transition: transform 0.6s ease-out;
+    -o-transition: -o-transform 0.6s ease-out;
+    transition: transform 0.6s ease-out;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+.button:active {
+    top: 1px;
+}
+/* add button */
+.button_type__add,
+.button_type__add .button_icon {
+    background-color: #acd373;
+}
+.button_type__add .button_icon:before {
+    content: '>';
+}
+.button_type__add:hover .button_icon {
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+/* remove button */
+.button_type__remove,
+.button_type__remove .button_icon {
+    background-color: #f26c4f;
+}
+.button_type__remove .button_icon:before {
+    content: '+';
+}
