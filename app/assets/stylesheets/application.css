@@ -112,3 +112,7 @@ h3 {
 .button_type__remove .button_icon:before {
     content: '+';
 }
+
+.field_with_errors{
+    color: #cd5c5c;
+}
