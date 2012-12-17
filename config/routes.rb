@@ -1,10 +1,16 @@
 Demo::Application.routes.draw do
+
   match '/home', :to => 'pages#home'
   match '/contact',   :to => 'pages#contact'
+
+  match '/signup',   :to => 'users#new'
+  match '/signin',   :to => 'sessions#new'
+  match '/signout',   :to => 'sessions#destroy'
 
   resources :messages
 
   resources :users
+  resources :sessions, :only => [ :new, :create, :destroy ]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
