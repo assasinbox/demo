@@ -1,5 +1,19 @@
 Demo::Application.routes.draw do
 
+  get "vadik/index"
+
+  get "vadik/gogo"
+
+  get "vadik/puk"
+
+  get "denchik/index"
+
+  get "denchik/new"
+
+  get "denchik/show"
+
+  get "denchik/popup"
+
   match '/home', :to => 'pages#home'
   match '/contact',   :to => 'pages#contact'
 
