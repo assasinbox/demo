@@ -1,19 +1,5 @@
 Demo::Application.routes.draw do
 
-  get "vadik/index"
-
-  get "vadik/gogo"
-
-  get "vadik/puk"
-
-  get "denchik/index"
-
-  get "denchik/new"
-
-  get "denchik/show"
-
-  get "denchik/popup"
-
   match '/home', :to => 'pages#home'
   match '/contact',   :to => 'pages#contact'
 
@@ -21,10 +7,17 @@ Demo::Application.routes.draw do
   match '/signin',   :to => 'sessions#new'
   match '/signout',   :to => 'sessions#destroy'
 
-  resources :messages
+  resources :microposts
 
-  resources :users
-  resources :sessions, :only => [ :new, :create, :destroy ]
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
+
+  resources :sessions,      :only => [:new, :create, :destroy]
+  resources :microposts,    :only => [:create, :destroy]
+  resources :relationships, :only => [:create, :destroy]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

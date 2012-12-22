@@ -116,3 +116,7 @@ h3 {
 .field_with_errors{
     color: #cd5c5c;
 }
+
+.users_list li{
+    margin: 10px;
+}

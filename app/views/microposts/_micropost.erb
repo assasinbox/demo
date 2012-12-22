@@ -1,0 +1,9 @@
+<tr>
+  <td class="micropost">
+    <span class="content"><%= micropost.content %></span>
+    <span class="timestamp btn-mini pull-right">
+      <i class="icon-star"></i>
+      Posted <%= time_ago_in_words(micropost.created_at) %> ago.
+    </span>
+  </td>
+</tr>

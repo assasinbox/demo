@@ -5,12 +5,14 @@
       <%= link_to logo, root_path %>
 
       <ul class="nav">
+        <li><%= link_to 'Home', home_path%></li>
 
         <% if signed_in? %>
+            <li><%= link_to "Users", users_path %></li>
             <li><%= link_to "Profile", current_user %></li>
+            <li><%= link_to "Settings", edit_user_path(current_user) %></li>
         <% end %>
 
-        <li><%= link_to 'Home', home_path%></li>
         <li><%= link_to 'Contact', contact_path %></li>
 
         <% if signed_in? %>
@@ -19,6 +21,8 @@
             <li><%= link_to "Sign in", signin_path %></li>
             <li><%= link_to 'Signup', signup_path %></li>
         <% end %>
+
+
 
       </ul>
     </div>

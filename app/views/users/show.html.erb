@@ -1,19 +1,36 @@
 <div class="row">
 
-  <div class="span2">
-    <%= gravatar_for @user, :size => 100 %>
+  <div class="span4 thumbnails">
+    <%= gravatar_for @user, :size => 256 %>
+
+    <div style="margin-top: 10px;">
+      <div class="thumbnail">
+        <p>
+          <b>Name:</b>
+          <%= @user.name %>
+        </p>
+
+        <p>
+          <b>Email:</b>
+          <%= @user.email %>
+        </p>
+        <strong>URL</strong> <%= link_to user_path(@user), @user %><br />
+        <strong>Microposts</strong> <%= @user.microposts.count %>
+        <%= render 'follow_form' if signed_in? %>
+      </div>
+    </div>
   </div>
 
-  <div class="span10">
-    <p>
-      <b>Name:</b>
-      <%= @user.name %>
-    </p>
+  <div class="span8">
 
-    <p>
-      <b>Email:</b>
-      <%= @user.email %>
-    </p>
+
+    <% unless @user.microposts.empty? %>
+        <table class="table table-striped" summary="User microposts">
+          <%= render @microposts %>
+        </table>
+        <%= will_paginate @microposts %>
+    <% end %>
+
   </div>
 
 </div>

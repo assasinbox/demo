@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/p7r/will_paginate.git
+  revision: 53d1da6da003dc172ee054e4cc416d0723f00b88
+  branch: rails3
+  specs:
+    will_paginate (3.0.pre3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -40,6 +47,7 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    faker (0.3.1)
     gravatar_image_tag (1.0.0.pre2)
     hike (1.2.1)
     i18n (0.6.1)
@@ -103,9 +111,11 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
+  faker (= 0.3.1)
   gravatar_image_tag (= 1.0.0.pre2)
   jquery-rails
   rails (= 3.2.1)
   sass-rails (~> 3.2.3)
   sqlite3
   uglifier (>= 1.0.3)
+  will_paginate!

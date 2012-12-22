@@ -7,6 +7,8 @@ gem 'rails', '3.2.1'
 
 gem 'sqlite3'
 gem 'gravatar_image_tag', '1.0.0.pre2'
+gem 'faker', '0.3.1'
+gem "will_paginate", :git => "https://github.com/p7r/will_paginate.git", :branch => "rails3"
 
 
 # Gems used only for assets and not required
