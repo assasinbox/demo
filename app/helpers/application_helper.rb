@@ -1,7 +1,7 @@
 module ApplicationHelper
 
   def title
-    base_title = "Demo :: "
+    base_title = "Demo :: Project"
     if @title.nil?
       base_title
     else
